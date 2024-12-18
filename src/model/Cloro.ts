@@ -1,12 +1,11 @@
 import { ProdutosParaPiscina } from "./ProdutosParaPiscina";
 
-export class Produto
-extends ProdutosParaPiscina{
+export class Cloro extends ProdutosParaPiscina{
    private _peso: number;
    private _quantidade: number;
-   constructor(nome: string, id: number, tipo: number, preco: number, peso:number, quantidade: number ){
+   constructor(id: number,nome: string, preco: number, peso:number, quantidade: number ){
 
-    super(nome, id, tipo, preco)
+    super(id, nome,  preco)
 
     this._peso = peso;
     this._quantidade = quantidade;
@@ -32,8 +31,8 @@ extends ProdutosParaPiscina{
 		this._quantidade = value;
 	}
 
-    visulizar(): void {
-        super.visulizar();
+    visualizar(): void {
+        super.visualizar();
         console.log("peso do produto" + this._peso)
         console.log("quantidade do prosuto" + this._quantidade)
 

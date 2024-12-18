@@ -1,13 +1,13 @@
-export class ProdutosParaPiscina{
+
+export abstract class ProdutosParaPiscina{
     private _nome: string;
     private _id: number;
-    private _tipo: number;
+    
     private _preco: number;
 
-	constructor(nome: string, id: number, tipo: number, preco: number) {
-		this._nome = nome;
+	constructor(id: number, nome: string, preco: number) {
 		this._id = id;
-		this._tipo = tipo;
+		this._nome= nome;
 		this._preco = preco;
 	}
 
@@ -19,11 +19,6 @@ export class ProdutosParaPiscina{
 
 	public get id(): number {
 		return this._id;
-	}
-
-    
-	public get tipo(): number {
-		return this._tipo;
 	}
 
  
@@ -41,22 +36,19 @@ export class ProdutosParaPiscina{
 		this._id = value;
 	}
 
-	public set tipo(value: number) {
-		this._tipo = value;
-	}
 
   
 	public set preco(value: number) {
 		this._preco = value;
 	}
 	
-    visulizar(){
+    visualizar(){
         console.log("\n\n*****************************************************");
         console.log("Dados do Produto:");
         console.log("*****************************************************");
         console.log("Nome: " + this._nome);
         console.log("id: " + this._id);
-        console.log("Tipo: " + this._tipo);
+       
         console.log("Preço: R$ " + this._preco.toFixed(2));
     }
 
