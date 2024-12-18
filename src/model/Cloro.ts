@@ -33,8 +33,8 @@ export class Cloro extends ProdutosParaPiscina{
 
     visualizar(): void {
         super.visualizar();
-        console.log("peso do produto" + this._peso)
-        console.log("quantidade do prosuto" + this._quantidade)
+        console.log("peso do produto: " + this._peso)
+        console.log("quantidade do produto: " + this._quantidade)
 
 
     }
